@@ -1,0 +1,22 @@
+{
+  "name": "socialkodde",
+  "version": "1.0.0",
+  "description": "Kodde Challenge application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmwatanabe/socialkodde.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmwatanabe/socialkodde/issues"
+  },
+  "homepage": "https://github.com/vmwatanabe/socialkodde#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
