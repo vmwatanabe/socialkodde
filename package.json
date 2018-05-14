@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/vmwatanabe/socialkodde#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "consign": "^0.1.6",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-validator": "^5.2.0"
   }
 }
