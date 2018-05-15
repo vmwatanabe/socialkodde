@@ -6,14 +6,17 @@ function postDAO(connection){
 }
 
 postDAO.prototype.insertPost = function(data){    
-    var Grid = require('gridfs-stream');
     var db = this._connection;
-    console.log(this._connection);
     this._connection.open(function(err, mongocli){
-        var gfs = Grid(db, mongocli);
-        gfs.collection('uploads');
         mongocli.collection("posts", function(err, collection){
-            collection.insert(data);
+            collection.insert(data, function(err, records){
+                if(err){
+                    res.json({'status': 'erro'});
+                }else{
+                    res.json({'status': 'inclusao realizada com sucesso'});
+                }
+                mongocli.close();
+            });
         });
     });
 }

@@ -7,7 +7,6 @@ module.exports.topost = function(application, req, res){
     var data_form = req.body;
 
     var connection = application.config.dbConnection;
-    console.log(connection);
     var postDAO = new application.app.models.postDAO(connection);
     
     postDAO.insertPost(data_form);

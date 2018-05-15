@@ -55,16 +55,22 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <form class="form-post" action="/topost" method="POST" id="post_form" enctype="multipart/form-data">
+          <div id="feedback"></div>
               <div class="form-group">
               <input type="file" name="file" id="file">
               <label for="file">Arquivo</label>
               <textarea class="form-control" rows="5" id="comment" form="post_form" name="description"></textarea>
-              <button type="submit" class="btn btn-primary">Enviar</button>         
+              <button id="send_post" class="btn btn-primary">Enviar</button>         
             </div>   
-          </form>
         </div>
       </section>
+
+      <section class="jumbotron text-center">
+        <div id="container_posts" class="container">
+
+        </div>
+      </section>
+
     </main>
 
     <footer class="text-muted">
@@ -85,6 +91,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/send_posts.js"></script>
   
   </body>
 </html>
