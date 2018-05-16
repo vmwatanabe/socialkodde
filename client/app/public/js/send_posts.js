@@ -7,17 +7,18 @@ $(document).ready(function(){
 
         var file = document.getElementById('file').files[0];
         var comment = document.getElementById('comment').value;
+        var username = $('#logged_username').text();
 
         formData.append("file", file);
         formData.append("comment", comment);
+        formData.append("user", username);
 
         var xhr = new XMLHttpRequest();
 
         // verificar as mudanças de estado
         xhr.onreadystatechange = function(){
             if(xhr.readyState == 4){
-                var resposta = xhr.responseText;
-                document.getElementById('feedback').innerHTML = resposta;
+                location.reload();
             }
         }
 

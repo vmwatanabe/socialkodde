@@ -1,6 +1,8 @@
 module.exports.post = function(application, req, res){
     if (req.session.auth){
-        res.render('main/init');
+        var session = new Object();
+        session.user = req.session.user;
+        res.render('main/init', {session: session});
     }else{
         res.redirect('/');
     }

@@ -38,7 +38,8 @@ app.post('/api', function(req, res){
     time_stamp = date.getTime();
     var post_obj = {
         url_image: '',
-        comment: data.comment
+        comment: data.comment,
+        time_stamp: time_stamp
     };
     if (data.file != 'undefined' ){
         var path_origin = req.files.file.path;
