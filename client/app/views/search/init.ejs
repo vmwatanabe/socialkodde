@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>Album example for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="album.css" rel="stylesheet">
@@ -20,48 +22,40 @@
   <body>
 
     <header>
-      
       <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
             <strong>Album</strong>
           </a>
-            <div class="search" id="container_search">
-              <input type="text" name="search_text" placeholder="Pesquisar um usuário" class="form-control" id="search_text">
-              <button type="button" class="btn btn-sucess" id="btn_search">Pesquisar</button>
-            </div>
-          <div class="container_username">
+        </div>
+        <div class="container_username">
             <a>Bem vindo, </a>
             <a id="logged_username"><%= session.user %></a>
           </div>
-          <input type="button" value="Sair" class="btn btn-primary" id="btn_logout">
-        </div>
       </div>
     </header>
 
     <main role="main">
 
-      <section class="jumbotron text-center">
+      <!-- <section class="jumbotron text-center">
         <div class="container">
-          <div id="feedback"></div>
-              <div class="form-group">
-              <input type="file" name="file" id="file">
-              <label for="file">Arquivo</label>
-              <textarea class="form-control" rows="5" id="comment" form="post_form" name="description"></textarea>
-              <button id="send_post" class="btn btn-primary">Enviar</button>         
-            </div>   
+          <h1 class="jumbotron-heading">Album example</h1>
+          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Main call to action</a>
+            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          </p>
         </div>
-      </section>
+      </section> -->
 
-      <section class="jumbotron text-center">
-        <div id="container_posts" class="container">
-
+      <div class='container search-container' id="search_container">
+        <div class='row'>
         </div>
-      </section>
+      </div>
 
     </main>
-
+    
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
@@ -80,8 +74,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="js/send_posts.js"></script>
-    <script src="js/main.js"></script>
-  
+    <script src="js/search.js"></script>
   </body>
 </html>

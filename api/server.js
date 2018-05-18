@@ -87,6 +87,27 @@ app.get('/api', function(req, res){
     });
 });
 
+app.post('/users', function(req, res){
+    var data = req.body;
+    var username = data.search_text;
+    var logged_user = data.logged_user;
+    console.log(username);
+    console.log('get users api');
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    db.open(function(err, mongoclient){
+        mongoclient.collection('user', function(err, collection){
+            collection.find({'user': {'$regex': username}}).toArray(function(err, results){
+                if(err){
+                    res.json(err);
+                }else{
+                    res.json(results);
+                }
+                mongoclient.close();
+            });
+        });
+    });
+});
+
 app.get('/uploads/:img', function(req, res){
     console.log('get image');
     var img = req.params.img;
